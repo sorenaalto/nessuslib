@@ -113,7 +113,7 @@ class nessusAPI:
 		file_id = r['file']
 		busy = True
 		while busy:
-			time.sleep(2)
+			time.sleep(5)
 			r = self.exportStatus(scan_id,file_id)
 			status = r['status']
 			if status == 'ready':
